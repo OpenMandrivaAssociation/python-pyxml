@@ -1,7 +1,7 @@
 %define module	PyXML
 %define name	python-pyxml
 %define version 0.8.4
-%define release %mkrel 7
+%define release %mkrel 8
 
 Name:		%{name}
 Version:	%{version}
@@ -12,7 +12,7 @@ License:	Apacheish License
 Group:		System/Libraries
 Summary:	XML libraries for python
 BuildRequires:	python-devel
-BuildRequires:	libexpat-devel
+BuildRequires:	libexpat-devel >= 2.0.1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Obsoletes:	%{module}
 Provides:	%{module}
@@ -28,14 +28,14 @@ to the Expat parser.
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" python setup.py build --with-libexpat=%_prefix
+CFLAGS="%{optflags}" python setup.py build --with-libexpat=%{_prefix}
 
 %install
-rm -fr $RPM_BUILD_ROOT
-python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES 
+rm -fr %{buildroot}
+python setup.py install --root=%{buildroot} --record=INSTALLED_FILES 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
@@ -45,5 +45,3 @@ rm -rf $RPM_BUILD_ROOT
 %lang(de) %{py_platsitedir}/*/dom/de/
 %lang(en_US) %{py_platsitedir}/*/dom/en_US/
 %lang(fr) %{py_platsitedir}/*/dom/fr/
-
-
