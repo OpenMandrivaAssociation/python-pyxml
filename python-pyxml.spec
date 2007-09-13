@@ -32,7 +32,7 @@ CFLAGS="%{optflags}" python setup.py build --with-libexpat=%{_prefix}
 
 %install
 rm -fr %{buildroot}
-python setup.py install --root=%{buildroot} --record=INSTALLED_FILES 
+python setup.py install -O 1 --root=%{buildroot} --record=INSTALLED_FILES 
 
 %clean
 rm -rf %{buildroot}
