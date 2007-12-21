@@ -13,6 +13,7 @@ Group:		System/Libraries
 Summary:	XML libraries for python
 BuildRequires:	python-devel
 BuildRequires:	libexpat-devel >= 2.0.1
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Obsoletes:	%{module}
 Provides:	%{module}
 #gw we need full python
