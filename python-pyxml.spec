@@ -1,7 +1,7 @@
 %define module	PyXML
 %define name	python-pyxml
 %define version 0.8.4
-%define release %mkrel 10
+%define release %mkrel 11
 
 Name:		%{name}
 Version:	%{version}
@@ -11,13 +11,11 @@ Source0:	http://prdownloads.sourceforge.net/pyxml/PyXML-%{version}.tar.bz2
 License:	Apacheish License
 Group:		System/Libraries
 Summary:	XML libraries for python
-BuildRequires:	python-devel
 BuildRequires:	libexpat-devel >= 2.0.1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Obsoletes:	%{module}
 Provides:	%{module}
-#gw we need full python
-Requires:	python
+%py_requires -d
 
 %description
 An XML package for Python. The distribution contains a validating XML parser,
