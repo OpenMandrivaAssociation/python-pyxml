@@ -6,9 +6,9 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-URL:		http://%{name}.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/pyxml/PyXML-%{version}.tar.bz2
-License:	Apacheish License
+URL:		http://pyxml.sourceforge.net/
+Source0:	http://downloads.sourceforge.net/pyxml/%{module}-%{version}.tar.bz2
+License:	MIT and Python and ZPLv1.0 and BSD
 Group:		System/Libraries
 Summary:	XML libraries for python
 BuildRequires:	libexpat-devel >= 2.0.1
