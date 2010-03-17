@@ -1,7 +1,7 @@
 %define module	PyXML
 %define name	python-pyxml
 %define version 0.8.4
-%define release %mkrel 12
+%define release %mkrel 13
 
 Name:		%{name}
 Version:	%{version}
