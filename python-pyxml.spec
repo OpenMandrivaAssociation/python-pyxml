@@ -1,14 +1,14 @@
 %define module	PyXML
 %define name	python-pyxml
 %define version 0.8.4
-%define release %mkrel 13
+%define release %mkrel 14
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 URL:		http://pyxml.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/pyxml/%{module}-%{version}.tar.bz2
-Patch0:     python-pyxml-fix_python_2.6.patch 
+Patch0:		python-pyxml-fix_python_2.6.patch 
 License:	MIT and Python and ZPLv1.0 and BSD
 Group:		System/Libraries
 Summary:	XML libraries for python
