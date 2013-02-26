@@ -12,7 +12,7 @@ Patch0:		python-pyxml-fix_python_2.6.patch
 License:	MIT and Python and ZPLv1.0 and BSD
 Group:		System/Libraries
 Summary:	XML libraries for python
-BuildRequires:	libexpat-devel >= 2.0.1
+BuildRequires:	pkgconfig(expat)
 Obsoletes:	%{module}
 Provides:	%{module}
 %py_requires -d
@@ -100,11 +100,11 @@ python setup.py install -O 1 --root=%{buildroot} --record=INSTALLED_FILES
 - rebuild for expat
 
 
-* Tue Nov 28 2006 Götz Waschk <waschk@mandriva.org> 0.8.4-7mdv2007.0
+* Tue Nov 28 2006 GÃ¶tz Waschk <waschk@mandriva.org> 0.8.4-7mdv2007.0
 + Revision: 88167
 - Import python-pyxml
 
-* Tue Nov 28 2006 G�tz Waschk <waschk@mandriva.org> 0.8.4-7mdv2007.1
+* Tue Nov 28 2006 Götz Waschk <waschk@mandriva.org> 0.8.4-7mdv2007.1
 - update file list
 
 * Wed Feb 01 2006 Michael Scherer <misc@mandriva.org> 0.8.4-6mdk
@@ -113,13 +113,13 @@ python setup.py install -O 1 --root=%{buildroot} --record=INSTALLED_FILES
 * Mon Jan 30 2006 Michael Scherer <misc@mandriva.org> 0.8.4-5mdk
 - fix file listing, and no longer ship .pyo
 
-* Tue Jan 17 2006 G�tz Waschk <waschk@mandriva.org> 0.8.4-4mdk
+* Tue Jan 17 2006 Götz Waschk <waschk@mandriva.org> 0.8.4-4mdk
 - depend on python
 
 * Sun Jan 01 2006 Mandriva Linux Team <http://www.mandrivaexpert.com/> 0.8.4-3mdk
 - Rebuild
 
-* Thu May 05 2005 G�tz Waschk <waschk@mandriva.org> 0.8.4-2mdk
+* Thu May 05 2005 Götz Waschk <waschk@mandriva.org> 0.8.4-2mdk
 - use external libexpat
 - enable xpath and xslt
 
