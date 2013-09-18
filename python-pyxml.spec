@@ -15,7 +15,7 @@ Summary:	XML libraries for python
 BuildRequires:	pkgconfig(expat)
 Obsoletes:	%{module}
 Provides:	%{module}
-%py_requires -d
+BuildRequires:	python-devel
 
 %description
 An XML package for Python. The distribution contains a validating XML parser,
