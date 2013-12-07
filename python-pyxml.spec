@@ -3,7 +3,7 @@
 Summary:	XML libraries for python
 Name:		python-pyxml
 Version:	0.8.4
-Release:	20
+Release:	21
 License:	MIT and Python and ZPLv1.0 and BSD
 Group:		System/Libraries
 Url:		http://pyxml.sourceforge.net/
