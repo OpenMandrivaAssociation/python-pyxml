@@ -23,27 +23,30 @@ to the Expat parser.
 %patch0 -p0
 
 %build
-CFLAGS="%{optflags}" python setup.py build --with-libexpat=%{_prefix}
+CFLAGS="%{optflags}" python2 setup.py build --with-libexpat=%{_prefix}
 
 %install
-python setup.py install -O 1 --root=%{buildroot} --record=INSTALLED_FILES 
+python2 setup.py install -O 1 --root=%{buildroot} --record=INSTALLED_FILES 
+
+find %{buildroot} -name *.pyo -exec rm -f {} \;
+find %{buildroot} -name *.pyc -exec rm -f {} \;
 
 %files
 %doc LICENCE ANNOUNCE CREDITS README README.dom README.pyexpat README.sgmlop TODO doc/*
 %{_bindir}/*
-%{py_platsitedir}/PyXML-0.8.4-py2.7.egg-info
-%{py_platsitedir}/_xmlplus/*py
-%{py_platsitedir}/_xmlplus/marshal/
-%{py_platsitedir}/_xmlplus/parsers/
-%{py_platsitedir}/_xmlplus/sax/
-%{py_platsitedir}/_xmlplus/schema/
-%{py_platsitedir}/_xmlplus/unicode/
-%{py_platsitedir}/_xmlplus/utils/
-%{py_platsitedir}/_xmlplus/xpath/
-%{py_platsitedir}/_xmlplus/dom/*py
-%{py_platsitedir}/_xmlplus/dom/ext/
-%{py_platsitedir}/_xmlplus/dom/html/
-%lang(de) %{py_platsitedir}/_xmlplus/dom/de/
-%lang(en_US) %{py_platsitedir}/_xmlplus/dom/en_US/
-%lang(fr) %{py_platsitedir}/_xmlplus/dom/fr/
+%{py2_platsitedir}/PyXML-0.8.4-py2.7.egg-info
+%{py2_platsitedir}/_xmlplus/*py
+%{py2_platsitedir}/_xmlplus/marshal/
+%{py2_platsitedir}/_xmlplus/parsers/
+%{py2_platsitedir}/_xmlplus/sax/
+%{py2_platsitedir}/_xmlplus/schema/
+%{py2_platsitedir}/_xmlplus/unicode/
+%{py2_platsitedir}/_xmlplus/utils/
+%{py2_platsitedir}/_xmlplus/xpath/
+%{py2_platsitedir}/_xmlplus/dom/*py
+%{py2_platsitedir}/_xmlplus/dom/ext/
+%{py2_platsitedir}/_xmlplus/dom/html/
+%lang(de) %{py2_platsitedir}/_xmlplus/dom/de/
+%lang(en_US) %{py2_platsitedir}/_xmlplus/dom/en_US/
+%lang(fr) %{py2_platsitedir}/_xmlplus/dom/fr/
 
