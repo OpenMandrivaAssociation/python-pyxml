@@ -6,7 +6,7 @@ Version:	0.8.4
 Release:	26
 License:	MIT and Python and ZPLv1.0 and BSD
 Group:		System/Libraries
-Url:		http://pyxml.sourceforge.net/
+Url:		https://pyxml.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/pyxml/%{module}-%{version}.tar.bz2
 Patch0:		python-pyxml-fix_python_2.6.patch 
 BuildRequires:	pkgconfig(expat)
